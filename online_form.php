@@ -44,9 +44,9 @@ if(!is_numeric($contact)) {header("location: fill_form.html?error=1");exit;}
 		}
 	mysql_close($connect);
 	header("location : index.html");
-	exit;
+	
 
-	else
+	else()
 	{
 		echo "Your response has been recorded";
 		header("location : index.html");

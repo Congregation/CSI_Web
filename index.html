@@ -33,10 +33,15 @@
       margin-top: 17px;
 
     }
-    #submitbutton:hover{
+    /*#submitbutton:hover{
 
-      background-color: #696a6d;
-    }	
+      background-color: red;
+    }
+
+    #apply:hover{
+
+      background-color: red;	
+    }*/	
     	</style>
 
     </head>
@@ -58,7 +63,7 @@
 						<li><a href="about.html" target="blank">About Us</a></li>
 						<li><a href="#section-sponsor">Sponsors</a></li>
 						<li><a href="#section-Gallery">Gallery</a></li>
-						<li><a href="council.htrtml" target="blank">Council</a></li>
+						<li><a href="council.html" target="blank">Council</a></li>
 					
 						
 						<li><a href="#section-contact">Contact Us</a></li>
@@ -97,7 +102,7 @@ And the difference lies in the vast array of cultural and technical societies wh
 		<section id="section-services" class="section pad-bot30 bg-white">
 	
 	  <div style="margin-top: -48px; margin-left: 880px;">	
-	  <form method="post" action = "fill_form.html" autocomplete = "on">
+	  <form method="post" action = "fill_form.html" autocomplete = "on" target="blank">
       <input type = "submit" value = "Apply for membership" id = "submitbutton" >
       </form>
       </div>
@@ -448,7 +453,7 @@ And the difference lies in the vast array of cultural and technical societies wh
 					<div class="col-md-offset-3 col-md-6">
 						<div class="section-header">
 							<h2 class="section-heading animated" data-animation="bounceInUp">Contact us</h2>
-							<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam.</p>
+							
 						</div>
 					</div>
 				</div>
@@ -458,7 +463,7 @@ And the difference lies in the vast array of cultural and technical societies wh
 							<div id="sendmessage">
 								 Your message has been sent. Thank you!
 							</div>
-							<form action="contact/contact.php" method="post" role="form" class="contactForm">
+							<form action="contact/contact.php" method="post" role="form" class="contactForm" style="color: black;">
 							  <div class="form-group">
 								<label for="name">Your Name</label>
 								<input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="maxlen:4" data-msg="Please enter at least 4 chars" />

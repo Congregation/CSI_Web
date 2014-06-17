@@ -3,17 +3,29 @@
 
 
 <head>
-	<title>Fill form</title>
-	<link rel = "icon" type = "image/png" href = "img/favicon.png" />
-	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="css/responsive.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+	<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Apply for CSI</title>
+        <meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel = "icon" type = "image/png" href = "img/favicon.png" />
 	
+		<link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />	
+		<link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.css">
+        <link rel="stylesheet" href="css/style.css">
+		<!-- skin -->
+		<link rel="stylesheet" href="skin/default.css">
+
+		 <style type="text/css">
+
 	
 	<style type="text/css">
 
 		#submitbutton{
-			background-color: black;
+			background-color: blue;
 			color: white;
 			font-family: Consolas;
 			width: 100px;
@@ -23,7 +35,7 @@
 		}
 		#submitbutton:hover{
 
-			background-color: #696a6d;
+			background-color: lightblue;
 		}
 
 		#form{
@@ -52,35 +64,36 @@
 
 <!--########################################## HEADER #############################################-->
 
-<header>
-      <div class="container clearfix">
-    <div class="row">
-          <div class="span12">
-        <div class="navbar navbar_">
-              <div class="container">
-            <h1 class="brand brand_"><a href="index.html"><img alt="" src="img/logo.gif" style="height:101px; margin-top:-20px;"> </a>
-                                     <a href="index.html"><img alt="" src="img/logo2.png" style="height: 101px;margin-top: -20px;"> </a></h1>
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse_">Menu <span class="icon-bar"></span> </a>
-            <div class="nav-collapse nav-collapse_  collapse">
-                  <ul class="nav sf-menu">
-                <li><a href="index.html">Home</a></li>
-                    
-                <li class="active"><a href="index-4.html">Contact</a></li>
-              </ul>
-                </div>
-          </div>
-            </div>
-      </div>
-        </div>
-  </div>
-    </header>
-<div class="bg-content"> 
+<section id="header" class="appear"></section>
+		<div class="navbar navbar-fixed-top" role="navigation" data-0="line-height:100px; height:100px; background-color:rgba(0,0,0,0.3);" data-300="line-height:60px; height:60px; background-color:rgba(0,0,0,1);">
+			 <div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="fa fa-bars color-white"></span>
+					</button>
+					<h1><a class="navbar-brand" href="index.html" data-0="line-height:90px;" data-300="line-height:50px;">Computer Society Of India-DTU Chapter
+					</a></h1>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;" style="margin-top: 25px;">
+						<li class="active"><a href="index.html">Home</a></li>
+						<li><a href="about.html" target="blank">About Us</a></li>
+						<li><a href="#section-sponsor">Sponsors</a></li>
+						<li><a href="#section-Gallery">Gallery</a></li>
+						<li><a href="council.html" target="blank">Council</a></li>
+					
+						
+						<li><a href="#section-contact">Contact Us</a></li>
+					</ul>
+				</div><!--/.navbar-collapse -->
+			</div>
+		</div>
 
 
 
 <!--#######################################      FORM      ###########################################-->
 
-<div id = "form">
+<div id = "form" style="margin-top: 280px; margin-left: 500px;">
 <form method="post" action = "online_form.php" autocomplete = "on">
 <table>
 <tr>
@@ -106,6 +119,7 @@
 <tr>
 	<th>Contact</th>
 	<th><input type = "int" name = "tel" placeholder = "Telephone" maxlength = "10" required/>
+<?php if(isset($_GET['error'])&&$_GET['error']==1) echo "</br><span style='color:red'>Incorrect format</span>" ?>
 	
 	</th>
 </tr>
@@ -128,7 +142,52 @@
 </form>
 </div>
 
-<p id="msg"><marquee>**Fill only after you have submitted the registration fees</marquee></p>
+<div style="height:100px; color:black;">
+<p id="msg" style="margin-top: 150px;"><marquee>**Fill only after you have submitted the registration fees</marquee></p>
+</div>
+
+
+<section id="footer" class="section footer" style="margin-top: 739px;">
+		<div class="container">
+			<div class="row animated opacity mar-bot20" data-andown="fadeIn" data-animation="animation">
+				<div class="col-sm-12 align-center">
+                    <ul class="social-network social-circle">
+                        <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>				
+				</div>
+			</div>
+
+			<div class="row align-center copyright">
+					<div class="col-sm-12"><p><a href="developers.html">View Developers</a></p></div>
+			</div>
+		</div>
+
+
+
+
+
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>	
+
+	<script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
+	<script src="js/jquery.isotope.min.js"></script>
+	<script src="js/jquery.nicescroll.min.js"></script>
+	<script src="js/fancybox/jquery.fancybox.pack.js"></script>
+	<script src="js/skrollr.min.js"></script>		
+	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
+	<script src="js/jquery.localscroll-1.2.7-min.js"></script>
+	<script src="js/stellar.js"></script>
+	<script src="js/jquery.appear.js"></script>
+	<script src="js/validate.js"></script>
+    <script src="js/main.js"></script>
+    
 
 </body>
 </html>
