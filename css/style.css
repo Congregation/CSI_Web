@@ -671,7 +671,7 @@ nav#filter a {
 }
 .portfolio-item .portfolio-desc {
     display: block;
-    opacity: 0;
+    opacity: 0.5;
     position: absolute;
     width: 100%;
 	left: 0;
@@ -684,7 +684,7 @@ nav#filter a {
 	padding-top: 20%;
 	height: 100%;
     transition: all 200ms ease-in-out 0s;
-	opacity: 1;
+	opacity: 0.3;
 }
 
 .portfolio-item .portfolio-desc a {
@@ -698,13 +698,13 @@ nav#filter a {
 	top:-20px;
 	padding: 30px;
 	height: 0;
-    opacity: 0;
+    opacity: 0.5;
     position: relative;
 }
 
 .portfolio-item:hover .folio-info{
 	height: 100%;
-    opacity: 1;
+    opacity: 0.5;
     transition: all 500ms ease-in-out 0s;
 	top:5px;
 }
@@ -717,6 +717,7 @@ nav#filter a {
 .portfolio-item .portfolio-desc .folio-info p {
 	color: #ffffff;
 	font-size: 12px;
+	opacity: 0;
 }
 
 
