@@ -93,7 +93,7 @@
 
 <!--#######################################      FORM      ###########################################-->
 
-<div id = "form" style="margin-top: 280px; margin-left: 500px;">
+<div id = "form" style="margin-top: 110px; margin-left: 500px;">
 <form method="post" action = "online_form.php" autocomplete = "on">
 <table>
 <tr>
@@ -119,7 +119,7 @@
 <tr>
 	<th>Contact</th>
 	<th><input type = "int" name = "tel" placeholder = "Telephone" maxlength = "10" required/>
-//<?php if(isset($_GET['error'])&&$_GET['error']==1) echo "</br><span style='color:red'>Incorrect format</span>" ?>
+<?php if(isset($_GET['error'])&&$_GET['error']==1) echo "</br><span style='color:red'>Incorrect format</span>" ?>
 	
 	</th>
 </tr>

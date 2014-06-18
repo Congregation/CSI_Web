@@ -14,26 +14,30 @@ function testinput($data)
 }
 
 
-if($_SERVER['REQUEST METHOD'] == "POST")
+if($_POST)
 {
-$firstname   = testinput($_POST['$firstname']);
-$lastname    = testinput($_POST['$lastname']);
-$currentyear = testinput($_POST['$currentyear']);
-$email       = testinput($_POST['$email']);
+$firstname   = testinput($_POST['firstname']);
+$lastname    = testinput($_POST['lastname']);
+$currentyear = testinput($_POST['currentyear']);
+$email       = testinput($_POST['email']);
 $contact     = testinput($_POST['tel']);
-$yearsjoined = testinput($_POST['$yearsjoined']);
-$fees        = testinput($_POST['$fees']);
+$yearsjoined = testinput($_POST['yearsjoined']);
+$fees        = testinput($_POST['fees']);
 }
 
 $_SESSION['firstname'] = $firstname;
-$_SESSION['lasttname'] = $lasttname;
+$_SESSION['lasttname'] = $lastname;
 $name = $_SESSION['firstname'] . "" . $_SESSION['firstname'];
 
-if(!is_numeric($contact)) {header("location: fill_form.html?error=1");exit;}
+if(!is_numeric($contact))
+		{
+			header("location: fill_form.php?error=1");
+			exit;
+		}
 
 //Update database
 
-	$query = "INSERT INTO form(name,currentyear,email,contact,yearsjoined,fees)
+	$query = "INSERT INTO information(name,current,email,contact,joinedfor,fees)
 		VALUES('$name','$currentyear','$email','$contact','$yearsjoined','$fees');";
 	$sql = mysql_query($query);
 
@@ -42,14 +46,16 @@ if(!is_numeric($contact)) {header("location: fill_form.html?error=1");exit;}
 			echo mysql_error();
 			exit;
 		}
-	mysql_close($connect);
-	header("location : index.html");
 	
 
-	else()
+	else
 	{
 		echo "Your response has been recorded";
 		header("location : index.html");
 	}
+
+	mysql_close($connect);
+	header("location : index.html");
+	
 
 ?>
