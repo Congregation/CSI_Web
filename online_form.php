@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 define("host", "localhost");
 define("user", "root");
 define("password", "");
@@ -54,7 +56,7 @@ if ($_POST) {
 		exit;
 	} else {
 
-		$_SESSION['firstname'] = $firstname;
+t(		$_SESSION['firstname'] = $firstname;
 		$_SESSION['lasttname'] = $lastname;
 		
 		echo "Your response has been recorded";
