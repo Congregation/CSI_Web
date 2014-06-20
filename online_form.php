@@ -38,10 +38,6 @@ if ($_POST) {
 	$fees        = testinput($_POST['fees']);
 	}
 
-	$_SESSION['firstname'] = $firstname;
-	$_SESSION['lasttname'] = $lastname;
-	$name = $_SESSION['firstname'] . " " . $_SESSION['lastname'];
-
 	if (!is_numeric($contact)) {
 		header("location: fill_form.php?error=1");
 		exit;
@@ -56,9 +52,12 @@ if ($_POST) {
 		echo mysql_error();
 		exit;
 	} else {
+
+		$_SESSION['firstname'] = $firstname;
+		$_SESSION['lasttname'] = $lastname;
+		$name = $_SESSION['firstname'] . " " . $_SESSION['lastname'];
+
 		echo "Your response has been recorded";
-		header("location : index.html");
-		exit;
 	}
 
 	mysql_close($connect);
