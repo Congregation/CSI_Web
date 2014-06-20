@@ -43,6 +43,7 @@ if ($_POST) {
 		exit;
 	}
 
+	$name = $firstname . " " . $lastname;
 	//Update database
 	$query = "INSERT INTO information(name,current,email,contact,joinedfor,fees)
 		VALUES('$name','$currentyear','$email','$contact','$yearsjoined','$fees');";
@@ -55,8 +56,7 @@ if ($_POST) {
 
 		$_SESSION['firstname'] = $firstname;
 		$_SESSION['lasttname'] = $lastname;
-		$name = $_SESSION['firstname'] . " " . $_SESSION['lastname'];
-
+		
 		echo "Your response has been recorded";
 	}
 
