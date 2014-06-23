@@ -113,13 +113,15 @@
 
 <tr>
 	<th>Email</th>
-	<th><input type = "email" name = "email" placeholder = "Email" maxlength = "25" required/></th>
+	<th><input type = "email" name = "email" placeholder = "Email" maxlength = "25" required/>
+	<?php if(isset($_GET['error'])&&$_GET['error']==2)echo "</br><span style='color:red'>User already registered</span>";?>
+	</th>
 </tr>
 
 <tr>
 	<th>Contact</th>
 	<th><input type = "int" name = "tel" placeholder = "Telephone" maxlength = "10" required/>
-<?php if(isset($_GET['error'])&&$_GET['error']==1) echo "</br><span style='color:red'>Incorrect format</span>" ?>
+<?php if(isset($_GET['error'])&&$_GET['error']==1) echo "</br><span style='color:red'>Incorrect format</span>"?>
 	
 	</th>
 </tr>
@@ -153,9 +155,10 @@
 				<div class="col-sm-12 align-center">
                     <ul class="social-network social-circle">
                         <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://twitter.com/CSIDTU" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://plus.google.com/u/0/b/106882834815777278175" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="http://www.linkedin.com/groups/CSI-DTU-Updates-6714603" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i>
+                        </a></li>
                     </ul>				
 				</div>
 			</div>

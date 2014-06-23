@@ -45,7 +45,21 @@ if ($_POST) {
 		exit;
 	}
 
-	$name = $firstname . " " . $lastname;
+
+	$query1=mysql_query("SELECT * FROM information WHERE `email`='".$email."'") or die(mysql_error());
+	if(mysql_num_rows($query1) >= 1)
+	{
+		header("location: fill_form.php?error=2");
+		exit;
+	}
+
+
+	
+
+	$_SESSION['firstname'] = $firstname;
+	$_SESSION['lastname'] = $lastname;
+	$name = $_SESSION['firstname'] . " " . $_SESSION['lastname'];
+
 	//Update database
 	$query = "INSERT INTO information(name,current,email,contact,joinedfor,fees)
 		VALUES('$name','$currentyear','$email','$contact','$yearsjoined','$fees');";
@@ -54,12 +68,16 @@ if ($_POST) {
 	if (!$sql) {
 		echo mysql_error();
 		exit;
-	} else {
+	} 
+	else 
+	{
+		echo "Your response has been recorded";
 
-t(		$_SESSION['firstname'] = $firstname;
+
+/*t(		$_SESSION['firstname'] = $firstname;
 		$_SESSION['lasttname'] = $lastname;
 		
-		echo "Your response has been recorded";
+		*/
 	}
 
 	mysql_close($connect);
